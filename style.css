@@ -55,6 +55,19 @@ body {
   gap: 6px;
 }
 
+.badge {
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 2px 4px 2px 4px;
+  border-radius: 1px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 1;
+}
+
 .product-card {
   position: relative;
   width: 213px;
@@ -95,6 +108,29 @@ body {
   margin-top: 5px;
 }
 
+.price-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.product-price {
+  color: #000;
+  font-weight: 600;
+}
+
+.product-compare {
+  text-decoration: line-through;
+  color: #8F8F8F;
+}
+
+.discount {
+  color: #FF3737;
+  font-weight: 600;
+}
+
 .add-to-cart {
   width: 213px;
   padding: 10px;
@@ -103,4 +139,55 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 1043px) {
+  .product-container {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .product-card {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 995px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .tabs {
+    width: 80%;
+  }
+
+  .tab {
+    width: 80%;
+  }
+
+  .product-card {
+    max-width: 300px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .add-to-cart {
+    padding: 8px;
+  }
 }

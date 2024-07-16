@@ -18,7 +18,10 @@ function displayProducts(products) {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
 
+        const discount = ((product.compare_at_price - product.price) / product.compare_at_price * 100).toFixed(0);
+
         productCard.innerHTML = `
+            ${product.badge_text ? `<div class="badge">${product.badge_text}</div>` : ''}
             <img src="${product.image}" alt="${product.title}" class="product-image">
             <div class="product-info">
                 <div class="product-title">${product.title}</div>

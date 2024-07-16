@@ -1,21 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+:root {
+  --font-family: 'Inter', sans-serif;
+  --tab-background: #F2F2F2;
+  --text-color-white: #FFF;
+  --text-color: #000;
+  --discount-color: #FF3737;
+  --line-through-color: #8F8F8F;
+  --title-width: 420px;
+  --product-card-width: 213px;
+  --product-card-height: 235px;
+  --title-font-size: 36px;
+  --tab-font-size: 18px;
+  --product-title-max-width: 120px;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-family: var(--font-family);
 }
 
 .title {
-  width: 420px;
+  width: var(--title-width);
   text-align: center;
   margin: 25px auto 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-size: var(--title-font-size);
   font-weight: 700;
   text-shadow: 0px 4px 4px #00000040;
 }
@@ -26,7 +40,7 @@ body {
   width: 705px;
   text-align: center;
   margin: 20px auto 40px;
-  background: #F2F2F2;
+  background: var(--tab-background);
   border-radius: 2px;
 }
 
@@ -34,16 +48,15 @@ body {
   width: 235px;
   height: 50px;
   text-align: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: var(--tab-font-size);
   font-weight: 600;
   border: none;
   cursor: pointer;
 }
 
 .tab:hover {
-  background: #000;
-  color: #FFFFFF;
+  background: var(--text-color);
+  color: var(--text-color-white);
 }
 
 .product-container {
@@ -59,9 +72,9 @@ body {
   position: absolute;
   top: 2px;
   left: 7px;
-  background-color: #FFFFFF;
-  color: #000;
-  padding: 2px 4px 2px 4px;
+  background-color: var(--text-color-white);
+  color: var(--text-color);
+  padding: 2px 4px;
   border-radius: 1px;
   font-size: 15px;
   font-weight: 600;
@@ -70,14 +83,14 @@ body {
 
 .product-card {
   position: relative;
-  width: 213px;
+  width: var(--product-card-width);
   border-radius: 2px;
-  background: #FFFFFF;
+  background: var(--text-color-white);
 }
 
 .product-image {
-  width: 213px;
-  height: 235px;
+  width: var(--product-card-width);
+  height: var(--product-card-height);
   border-radius: 2px;
 }
 
@@ -90,7 +103,7 @@ body {
 }
 
 .product-title {
-  max-width: 120px;
+  max-width: var(--product-title-max-width);
   font-size: 18px;
   font-weight: 600;
   overflow: hidden;
@@ -100,11 +113,11 @@ body {
 
 .product-vendor::before {
   content: '• ';
-  color: #000;
+  color: var(--text-color);
 }
 
 .product-vendor {
-  color: #000;
+  color: var(--text-color);
   margin-top: 5px;
 }
 
@@ -117,25 +130,25 @@ body {
 }
 
 .product-price {
-  color: #000;
+  color: var(--text-color);
   font-weight: 600;
 }
 
 .product-compare {
   text-decoration: line-through;
-  color: #8F8F8F;
+  color: var(--line-through-color);
 }
 
 .discount {
-  color: #FF3737;
+  color: var(--discount-color);
   font-weight: 600;
 }
 
 .add-to-cart {
-  width: 213px;
+  width: var(--product-card-width);
   padding: 10px;
-  background: #000;
-  color: #FFFFFF;
+  background: var(--text-color);
+  color: var(--text-color-white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
